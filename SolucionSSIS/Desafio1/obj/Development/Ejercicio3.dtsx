@@ -1,0 +1,2344 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/17/2023 8:09:25 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-EPSHU7E"
+  DTS:CreatorName="DESKTOP-EPSHU7E\PatriciaPR"
+  DTS:DTSID="{32923DEF-54B3-4CEA-9FA9-D07578616021}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5314.0"
+  DTS:LocaleID="17418"
+  DTS:ObjectName="Ejercicio3"
+  DTS:PackageType="5"
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{DC56C83B-4C53-4F7C-8F82-7E3AF7E04F43}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{015D5AE3-E1B7-4649-9C9E-0B8407F94885}"
+      DTS:ObjectName="Administrador de conexiones con Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\PatriciaPR\Documents\UDB\Ingenieria\Ciclo 04\DMD\Unidad 2\Desafio1\Ejercicio 3\Ejecutivo y Preferencial.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{2C9089A0-7FB5-4D66-AD19-9DDB5BCCE68D}"
+      DTS:ObjectName="Administrador de conexiones con Excel 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\PatriciaPR\Documents\UDB\Ingenieria\Ciclo 04\DMD\Unidad 2\Desafio1\Ejercicio 3\Turista y Gubernamental.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-EPSHU7E.db_roaming_honduras]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0A673B96-32FA-40FF-9164-A18899CE87F5}"
+      DTS:ObjectName="DESKTOP-EPSHU7E.db_roaming_honduras">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-EPSHU7E;Initial Catalog=db_roaming_honduras;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package2-{0A673B96-32FA-40FF-9164-A18899CE87F5}DESKTOP-EPSHU7E.db_roaming_honduras;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-EPSHU7E.db_roaming_honduras1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{5E0ADEED-B9A0-4C23-97E3-352A8367B947}"
+      DTS:ObjectName="DESKTOP-EPSHU7E.db_roaming_honduras1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-EPSHU7E;Initial Catalog=db_roaming_honduras;Integrated Security=True;Application Name=SSIS-Package2-{5E0ADEED-B9A0-4C23-97E3-352A8367B947}DESKTOP-EPSHU7E.db_roaming_honduras1;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MySQL_DataSource.root]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{67C4CC83-6EB3-4BEB-A476-E8CBBEA65369}"
+      DTS:ObjectName="MySQL_DataSource.root">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=root;Dsn=MySQL_DataSource;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7gQHMEFkWUGCe01oP9Yl4gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC5C3jWk8TmAIGVbdaIkLiY54+pnEGR2/NkOq55jT72dgAAAAAOgAAAAAIAACAAAAApT5Zz29IRfRX1LrvhrqlsIt7C42+aO3yJeB5qF+XvjiAAAACBuv87DGchZBDmyUociVBxTyrj9fvWTixo5fQUaAhptkAAAACQhyRrH7EUtPhL9FAX5TP0GNtotlLgxO5IuWrMaGvfny0sjYCzMjbH01i698BaH83QYvwClB/hqTCwUfghGOWS</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MySQL_DataSource.root 1]"
+      DTS:CreationName="ADO.NET:System.Data.Odbc.OdbcConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{CD2A8A8B-413C-4780-B80F-E8F92C930604}"
+      DTS:ObjectName="MySQL_DataSource.root 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=root;Dsn=MySQL_DataSource;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7gQHMEFkWUGCe01oP9Yl4gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACq/Lp0HOKhXOsxQbzCIY2F+WqAi9L4j6gjHNAmnZ2TNAAAAAAOgAAAAAIAACAAAACQC690l3cCedi23VGGrQREwzduyhMeLleFTp/lEiXNnyAAAADEWpwpiWkWvv1nJYIj0Vmgifn7Qu9BLiuDMG14Q3kPEUAAAAD6ZmW2ZexorkD5uyqwJfe+dZOAftmkqt+YGmc3nNrATt6d58s0Mxtc6Wp+LPrsTF3jMKxiDEptog3wtpHIUWRC</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MySQL_DataSource.root 2]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{68F73196-E266-46DF-A0CE-8701E4F51538}"
+      DTS:ObjectName="MySQL_DataSource.root 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=root;Dsn=MySQL_DataSource;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7gQHMEFkWUGCe01oP9Yl4gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAfZR8k5HpQAR+ZYK5k3XACs0FHxjuCpzFd7oGDDL7uaAAAAAAOgAAAAAIAACAAAAA93t8vCYz+y1vzMc4m2P790VXPQTtSfoijo+khz22TPCAAAABqL0f5sclTKeqOoOdRXD6vIFqvT3oehQf1+QarpS0aXUAAAADjvgwiiTGaK2kxEWWdcVEbYv8ua3ilRr0XQk1HGTj7GILdkbomGbbL9xyoLwqOkaBicvAQXyFwR4mN5INNdoAI</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{39382CD2-07A7-4D66-A54E-6234FC1C4E5F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada].Columns[codigo_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="codigo_cliente"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[codigo_cliente]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[codigo_pais]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      length="2"
+                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[codigo_pais]"
+                      name="codigo_pais"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[SUBSTRING](#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[codigo_cliente]},1,2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING(codigo_cliente,1,2)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Costa Rica MySQL Server"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+	A.idfacturacion,
+	A.monto_facturacion,
+	A.idcliente,
+	B.codigo_cliente,
+	B.dui,
+	B.nit,
+	B.apellidos,
+	B.nombres,
+	B.sexo,
+	B.numero_telefono,
+	B.estado,
+	C.idtipocliente,
+	C.nombre_tipo
+FROM facturacion A
+INNER JOIN cliente B ON A.idcliente=B.idcliente
+INNER JOIN tipo_clientes C ON B.idtipocliente=C.idtipocliente</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MySQL_DataSource.root 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[MySQL_DataSource.root 1]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[idfacturacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[idfacturacion]"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[idfacturacion]"
+                      name="idfacturacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[monto_facturacion]"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[idcliente]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[idcliente]"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[idcliente]"
+                      name="idcliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[codigo_cliente]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[codigo_cliente]"
+                      length="15"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[codigo_cliente]"
+                      name="codigo_cliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[dui]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[dui]"
+                      length="9"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[dui]"
+                      name="dui"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[nit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[nit]"
+                      length="14"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[nit]"
+                      name="nit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[apellidos]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[apellidos]"
+                      length="250"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[apellidos]"
+                      name="apellidos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[nombres]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[nombres]"
+                      length="250"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[nombres]"
+                      name="nombres"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[sexo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[sexo]"
+                      length="1"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[sexo]"
+                      name="sexo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[numero_telefono]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[numero_telefono]"
+                      length="8"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[numero_telefono]"
+                      name="numero_telefono"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[estado]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[estado]"
+                      length="1"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[estado]"
+                      name="estado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[idtipocliente]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[idtipocliente]"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[idtipocliente]"
+                      name="idtipocliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[nombre_tipo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[nombre_tipo]"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[nombre_tipo]"
+                      name="nombre_tipo"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[idfacturacion]"
+                      dataType="i4"
+                      name="idfacturacion" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[monto_facturacion]"
+                      dataType="numeric"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[idcliente]"
+                      dataType="i4"
+                      name="idcliente" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[codigo_cliente]"
+                      dataType="wstr"
+                      length="15"
+                      name="codigo_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[dui]"
+                      dataType="wstr"
+                      length="9"
+                      name="dui" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[nit]"
+                      dataType="wstr"
+                      length="14"
+                      name="nit" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[apellidos]"
+                      dataType="wstr"
+                      length="250"
+                      name="apellidos" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[nombres]"
+                      dataType="wstr"
+                      length="250"
+                      name="nombres" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[sexo]"
+                      dataType="wstr"
+                      length="1"
+                      name="sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[numero_telefono]"
+                      dataType="wstr"
+                      length="8"
+                      name="numero_telefono" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[estado]"
+                      dataType="wstr"
+                      length="1"
+                      name="estado" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[idtipocliente]"
+                      dataType="i4"
+                      name="idtipocliente" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[nombre_tipo]"
+                      dataType="wstr"
+                      length="100"
+                      name="nombre_tipo" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[idfacturacion]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[idfacturacion]"
+                      name="idfacturacion" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[idcliente]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[idcliente]"
+                      name="idcliente" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[codigo_cliente]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[codigo_cliente]"
+                      name="codigo_cliente" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[dui]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[dui]"
+                      name="dui" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[nit]"
+                      dataType="wstr"
+                      length="14"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[nit]"
+                      name="nit" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[apellidos]"
+                      dataType="wstr"
+                      length="250"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[apellidos]"
+                      name="apellidos" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[nombres]"
+                      dataType="wstr"
+                      length="250"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[nombres]"
+                      name="nombres" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[sexo]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[sexo]"
+                      name="sexo" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[numero_telefono]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[numero_telefono]"
+                      name="numero_telefono" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[estado]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[estado]"
+                      name="estado" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[idtipocliente]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[idtipocliente]"
+                      name="idtipocliente" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[nombre_tipo]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[nombre_tipo]"
+                      name="nombre_tipo" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\División condicional"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="División condicional;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Enruta filas de datos a diferentes salidas según el contenido de los datos. Se usan condiciones (expresiones de SSIS) para especificar las filas que se van a enrutar. Por ejemplo, se usa para separar los registros que deben limpiarse de los registros listos para ser cargados o para enrutar solamente un subconjunto de registros."
+              name="División condicional"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\División condicional.Inputs[Entrada de división condicional]"
+                  description="Entrada en la transformación División condicional"
+                  name="Entrada de división condicional">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\División condicional.Inputs[Entrada de división condicional].Columns[idtipocliente]"
+                      cachedDataType="i4"
+                      cachedName="idtipocliente"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idtipocliente]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\División condicional.Outputs[Ejecutivo_Preferencial]"
+                  description="Salida 2 de la transformación División condicional"
+                  errorOrTruncationOperation="Cálculo"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Ejecutivo_Preferencial"
+                  synchronousInputId="Package\Tarea Flujo de datos\División condicional.Inputs[Entrada de división condicional]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica la expresión. Esta versión de expresión usa identificadores de linaje en lugar de nombres de columna."
+                      name="Expression">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idtipocliente]} == 1 || #{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idtipocliente]} == 2</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica la versión descriptiva de la expresión. Esta versión de expresión usa nombres de columna."
+                      expressionType="Notify"
+                      name="FriendlyExpression">idtipocliente == 1 || idtipocliente == 2</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica la posición de la condición en la lista de condiciones que evalúa la transformación. El orden de evaluación es del menor al mayor valor."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\División condicional.Outputs[Turista_Gubernamental]"
+                  description="Salida 3 de la transformación División condicional"
+                  errorOrTruncationOperation="Cálculo"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Turista_Gubernamental"
+                  synchronousInputId="Package\Tarea Flujo de datos\División condicional.Inputs[Entrada de división condicional]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica la expresión. Esta versión de expresión usa identificadores de linaje en lugar de nombres de columna."
+                      name="Expression">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idtipocliente]} == 3 || #{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idtipocliente]} == 4</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Especifica la versión descriptiva de la expresión. Esta versión de expresión usa nombres de columna."
+                      expressionType="Notify"
+                      name="FriendlyExpression">idtipocliente == 3 || idtipocliente == 4</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica la posición de la condición en la lista de condiciones que evalúa la transformación. El orden de evaluación es del menor al mayor valor."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\División condicional.Outputs[Salida predeterminada de división condicional]"
+                  description="Salida predeterminada de la transformación División condicional"
+                  exclusionGroup="1"
+                  name="Salida predeterminada de división condicional"
+                  synchronousInputId="Package\Tarea Flujo de datos\División condicional.Inputs[Entrada de división condicional]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\División condicional.Outputs[Salida de error de división condicional]"
+                  description="Salida de error de la transformación División condicional"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de división condicional"
+                  synchronousInputId="Package\Tarea Flujo de datos\División condicional.Inputs[Entrada de división condicional]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\División condicional.Outputs[Salida de error de división condicional].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\División condicional.Outputs[Salida de error de división condicional].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\División condicional.Outputs[Salida de error de división condicional].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\División condicional.Outputs[Salida de error de división condicional].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Destino de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Destino de Excel"
+              name="Excel Ejecutivo-Preferencial"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">Excel_Ejecutivo_Preferencial</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de Excel">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].Columns[idfacturacion]"
+                      cachedDataType="i4"
+                      cachedName="idfacturacion"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[idfacturacion]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idfacturacion]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].Columns[monto_facturacion]"
+                      cachedDataType="numeric"
+                      cachedName="monto_facturacion"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[monto_facturacion]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[monto_facturacion]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].Columns[codigo_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="codigo_cliente"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[codigo_cliente]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[codigo_cliente]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].Columns[dui]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="dui"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[dui]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[dui]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].Columns[nit]"
+                      cachedDataType="wstr"
+                      cachedLength="14"
+                      cachedName="nit"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[nit]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nit]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].Columns[apellidos]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="apellidos"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[apellidos]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[apellidos]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].Columns[nombres]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="nombres"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[nombres]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nombres]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].Columns[sexo]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="sexo"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[sexo]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[sexo]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].Columns[numero_telefono]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="numero_telefono"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[numero_telefono]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[numero_telefono]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].Columns[estado]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="estado"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[estado]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[estado]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].Columns[nombre_tipo]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="nombre_tipo"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[nombre_tipo]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nombre_tipo]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].Columns[codigo_pais]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="codigo_pais"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[codigo_pais]"
+                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[codigo_pais]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[idfacturacion]"
+                      dataType="wstr"
+                      length="255"
+                      name="idfacturacion" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[monto_facturacion]"
+                      dataType="wstr"
+                      length="255"
+                      name="monto_facturacion" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[codigo_cliente]"
+                      dataType="wstr"
+                      length="255"
+                      name="codigo_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[dui]"
+                      dataType="wstr"
+                      length="255"
+                      name="dui" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[nit]"
+                      dataType="wstr"
+                      length="255"
+                      name="nit" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[apellidos]"
+                      dataType="wstr"
+                      length="255"
+                      name="apellidos" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[nombres]"
+                      dataType="wstr"
+                      length="255"
+                      name="nombres" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[sexo]"
+                      dataType="wstr"
+                      length="255"
+                      name="sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[numero_telefono]"
+                      dataType="wstr"
+                      length="255"
+                      name="numero_telefono" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[estado]"
+                      dataType="wstr"
+                      length="255"
+                      name="estado" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[nombre_tipo]"
+                      dataType="wstr"
+                      length="255"
+                      name="nombre_tipo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel].ExternalColumns[codigo_pais]"
+                      dataType="wstr"
+                      length="255"
+                      name="codigo_pais" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Outputs[Salida de error de destino de Excel]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de Excel"
+                  synchronousInputId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Outputs[Salida de error de destino de Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Outputs[Salida de error de destino de Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Outputs[Salida de error de destino de Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Outputs[Salida de error de destino de Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Destino de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Destino de Excel"
+              name="Excel Turista-Gubernamental"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">Excel_Turista_Gubernamental</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de Excel">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].Columns[idfacturacion]"
+                      cachedDataType="i4"
+                      cachedName="idfacturacion"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[idfacturacion]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idfacturacion]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].Columns[monto_facturacion]"
+                      cachedDataType="numeric"
+                      cachedName="monto_facturacion"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[monto_facturacion]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[monto_facturacion]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].Columns[codigo_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="codigo_cliente"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[codigo_cliente]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[codigo_cliente]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].Columns[dui]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="dui"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[dui]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[dui]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].Columns[nit]"
+                      cachedDataType="wstr"
+                      cachedLength="14"
+                      cachedName="nit"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[nit]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nit]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].Columns[apellidos]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="apellidos"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[apellidos]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[apellidos]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].Columns[nombres]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="nombres"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[nombres]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nombres]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].Columns[sexo]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="sexo"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[sexo]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[sexo]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].Columns[numero_telefono]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="numero_telefono"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[numero_telefono]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[numero_telefono]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].Columns[estado]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="estado"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[estado]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[estado]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].Columns[nombre_tipo]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="nombre_tipo"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[nombre_tipo]"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nombre_tipo]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].Columns[codigo_pais]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="codigo_pais"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[codigo_pais]"
+                      lineageId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[codigo_pais]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[idfacturacion]"
+                      dataType="wstr"
+                      length="255"
+                      name="idfacturacion" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[monto_facturacion]"
+                      dataType="wstr"
+                      length="255"
+                      name="monto_facturacion" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[codigo_cliente]"
+                      dataType="wstr"
+                      length="255"
+                      name="codigo_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[dui]"
+                      dataType="wstr"
+                      length="255"
+                      name="dui" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[nit]"
+                      dataType="wstr"
+                      length="255"
+                      name="nit" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[apellidos]"
+                      dataType="wstr"
+                      length="255"
+                      name="apellidos" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[nombres]"
+                      dataType="wstr"
+                      length="255"
+                      name="nombres" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[sexo]"
+                      dataType="wstr"
+                      length="255"
+                      name="sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[numero_telefono]"
+                      dataType="wstr"
+                      length="255"
+                      name="numero_telefono" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[estado]"
+                      dataType="wstr"
+                      length="255"
+                      name="estado" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[nombre_tipo]"
+                      dataType="wstr"
+                      length="255"
+                      name="nombre_tipo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel].ExternalColumns[codigo_pais]"
+                      dataType="wstr"
+                      length="255"
+                      name="codigo_pais" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Outputs[Salida de error de destino de Excel]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de Excel"
+                  synchronousInputId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Outputs[Salida de error de destino de Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Outputs[Salida de error de destino de Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Outputs[Salida de error de destino de Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Outputs[Salida de error de destino de Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Honduras SQL Server"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Honduras SQL Server"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+	A.idfacturacion,
+	A.monto_facturacion,
+	A.idcliente,
+	B.codigo_cliente,
+	B.dui,
+	B.nit,
+	B.apellidos,
+	B.nombres,
+	B.sexo,
+	B.numero_telefono,
+	B.estado,
+	C.idtipocliente,
+	C.nombre_tipo
+FROM facturacion A
+INNER JOIN cliente B ON A.idcliente=B.idcliente
+INNER JOIN tipo_clientes C ON B.idtipocliente=C.idtipocliente</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Honduras SQL Server.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-EPSHU7E.db_roaming_honduras1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-EPSHU7E.db_roaming_honduras1]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[idfacturacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[idfacturacion]"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[idfacturacion]"
+                      name="idfacturacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[monto_facturacion]"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[idcliente]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[idcliente]"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[idcliente]"
+                      name="idcliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[codigo_cliente]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[codigo_cliente]"
+                      length="15"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[codigo_cliente]"
+                      name="codigo_cliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[dui]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[dui]"
+                      length="9"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[dui]"
+                      name="dui"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[nit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[nit]"
+                      length="14"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[nit]"
+                      name="nit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[apellidos]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[apellidos]"
+                      length="250"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[apellidos]"
+                      name="apellidos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[nombres]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[nombres]"
+                      length="250"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[nombres]"
+                      name="nombres"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[sexo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[sexo]"
+                      length="1"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[sexo]"
+                      name="sexo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[numero_telefono]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[numero_telefono]"
+                      length="8"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[numero_telefono]"
+                      name="numero_telefono"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[estado]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[estado]"
+                      length="1"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[estado]"
+                      name="estado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[idtipocliente]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[idtipocliente]"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[idtipocliente]"
+                      name="idtipocliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[nombre_tipo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[nombre_tipo]"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[nombre_tipo]"
+                      name="nombre_tipo"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[idfacturacion]"
+                      dataType="i4"
+                      name="idfacturacion" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[monto_facturacion]"
+                      dataType="numeric"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[idcliente]"
+                      dataType="i4"
+                      name="idcliente" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[codigo_cliente]"
+                      dataType="wstr"
+                      length="15"
+                      name="codigo_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[dui]"
+                      dataType="wstr"
+                      length="9"
+                      name="dui" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[nit]"
+                      dataType="wstr"
+                      length="14"
+                      name="nit" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[apellidos]"
+                      dataType="wstr"
+                      length="250"
+                      name="apellidos" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[nombres]"
+                      dataType="wstr"
+                      length="250"
+                      name="nombres" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[sexo]"
+                      dataType="wstr"
+                      length="1"
+                      name="sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[numero_telefono]"
+                      dataType="wstr"
+                      length="8"
+                      name="numero_telefono" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[estado]"
+                      dataType="wstr"
+                      length="1"
+                      name="estado" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[idtipocliente]"
+                      dataType="i4"
+                      name="idtipocliente" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].ExternalColumns[nombre_tipo]"
+                      dataType="wstr"
+                      length="100"
+                      name="nombre_tipo" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[idfacturacion]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[idfacturacion]"
+                      name="idfacturacion" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[idcliente]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[idcliente]"
+                      name="idcliente" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[codigo_cliente]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[codigo_cliente]"
+                      name="codigo_cliente" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[dui]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[dui]"
+                      name="dui" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[nit]"
+                      dataType="wstr"
+                      length="14"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[nit]"
+                      name="nit" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[apellidos]"
+                      dataType="wstr"
+                      length="250"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[apellidos]"
+                      name="apellidos" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[nombres]"
+                      dataType="wstr"
+                      length="250"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[nombres]"
+                      name="nombres" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[sexo]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[sexo]"
+                      name="sexo" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[numero_telefono]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[numero_telefono]"
+                      name="numero_telefono" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[estado]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[estado]"
+                      name="estado" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[idtipocliente]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[idtipocliente]"
+                      name="idtipocliente" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[nombre_tipo]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[nombre_tipo]"
+                      name="nombre_tipo" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Unión de todo"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Unión de todo;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Combina las filas de varios flujos de datos sin ordenarlos. Por ejemplo, devuelve filas a un flujo de datos después de corregir los errores. Si el orden es importante, se recomienda usar la transformación Mezclar."
+              name="Unión de todo"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1]"
+                  name="Entrada de Unión de todo 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[idfacturacion]"
+                      cachedDataType="i4"
+                      cachedName="idfacturacion"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[idfacturacion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idfacturacion]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[monto_facturacion]"
+                      cachedDataType="numeric"
+                      cachedName="monto_facturacion"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[monto_facturacion]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[idcliente]"
+                      cachedDataType="i4"
+                      cachedName="idcliente"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[idcliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idcliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[codigo_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="codigo_cliente"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[codigo_cliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[codigo_cliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[dui]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="dui"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[dui]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[dui]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[nit]"
+                      cachedDataType="wstr"
+                      cachedLength="14"
+                      cachedName="nit"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[nit]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[apellidos]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="apellidos"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[apellidos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[apellidos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[nombres]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="nombres"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[nombres]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nombres]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[sexo]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="sexo"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[sexo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[numero_telefono]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="numero_telefono"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[numero_telefono]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[numero_telefono]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[estado]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="estado"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[estado]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[estado]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[idtipocliente]"
+                      cachedDataType="i4"
+                      cachedName="idtipocliente"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[idtipocliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idtipocliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[nombre_tipo]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="nombre_tipo"
+                      lineageId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET].Columns[nombre_tipo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nombre_tipo]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3]"
+                  hasSideEffects="true"
+                  name="Entrada de Unión de todo 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3].Columns[idfacturacion]"
+                      cachedDataType="i4"
+                      cachedName="idfacturacion"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[idfacturacion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idfacturacion]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3].Columns[monto_facturacion]"
+                      cachedDataType="numeric"
+                      cachedName="monto_facturacion"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[monto_facturacion]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3].Columns[idcliente]"
+                      cachedDataType="i4"
+                      cachedName="idcliente"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[idcliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idcliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3].Columns[codigo_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="codigo_cliente"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[codigo_cliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[codigo_cliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3].Columns[dui]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="dui"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[dui]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[dui]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3].Columns[nit]"
+                      cachedDataType="wstr"
+                      cachedLength="14"
+                      cachedName="nit"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[nit]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3].Columns[apellidos]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="apellidos"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[apellidos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[apellidos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3].Columns[nombres]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="nombres"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[nombres]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nombres]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3].Columns[sexo]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="sexo"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[sexo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3].Columns[numero_telefono]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="numero_telefono"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[numero_telefono]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[numero_telefono]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3].Columns[estado]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="estado"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[estado]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[estado]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3].Columns[idtipocliente]"
+                      cachedDataType="i4"
+                      cachedName="idtipocliente"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[idtipocliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idtipocliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3].Columns[nombre_tipo]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="nombre_tipo"
+                      lineageId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET].Columns[nombre_tipo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nombre_tipo]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 2]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Entrada de Unión de todo 2">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1]"
+                  name="Salida de Unión de todo 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idfacturacion]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idfacturacion]"
+                      name="idfacturacion" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idcliente]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idcliente]"
+                      name="idcliente" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[codigo_cliente]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[codigo_cliente]"
+                      name="codigo_cliente" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[dui]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[dui]"
+                      name="dui" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nit]"
+                      dataType="wstr"
+                      length="14"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nit]"
+                      name="nit" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[apellidos]"
+                      dataType="wstr"
+                      length="250"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[apellidos]"
+                      name="apellidos" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nombres]"
+                      dataType="wstr"
+                      length="250"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nombres]"
+                      name="nombres" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[sexo]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[sexo]"
+                      name="sexo" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[numero_telefono]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[numero_telefono]"
+                      name="numero_telefono" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[estado]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[estado]"
+                      name="estado" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idtipocliente]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[idtipocliente]"
+                      name="idtipocliente" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nombre_tipo]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[nombre_tipo]"
+                      name="nombre_tipo" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Ejecutivo_Preferencial]"
+              endId="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial.Inputs[Entrada de destino de Excel]"
+              name="Ejecutivo_Preferencial"
+              startId="Package\Tarea Flujo de datos\División condicional.Outputs[Ejecutivo_Preferencial]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
+              endId="Package\Tarea Flujo de datos\División condicional.Inputs[Entrada de división condicional]"
+              name="Salida de columna derivada"
+              startId="Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET]"
+              endId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 1]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Tarea Flujo de datos\Costa Rica MySQL Server.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET1]"
+              endId="Package\Tarea Flujo de datos\Unión de todo.Inputs[Entrada de Unión de todo 3]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Tarea Flujo de datos\Honduras SQL Server.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de Unión de todo 1]"
+              endId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada]"
+              name="Salida de Unión de todo 1"
+              startId="Package\Tarea Flujo de datos\Unión de todo.Outputs[Salida de Unión de todo 1]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Turista_Gubernamental]"
+              endId="Package\Tarea Flujo de datos\Excel Turista-Gubernamental.Inputs[Entrada de destino de Excel]"
+              name="Turista_Gubernamental"
+              startId="Package\Tarea Flujo de datos\División condicional.Outputs[Turista_Gubernamental]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Tarea Flujo de datos"
+          TopLeft="329,108" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Tarea Flujo de datos\Excel Turista-Gubernamental"
+          TopLeft="530,327" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Tarea Flujo de datos\División condicional"
+          TopLeft="320,232" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial"
+          TopLeft="156,321" />
+        <NodeLayout
+          Size="165,44"
+          Id="Package\Tarea Flujo de datos\Costa Rica MySQL Server"
+          TopLeft="216,46" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Tarea Flujo de datos\Unión de todo"
+          TopLeft="344,141" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Tarea Flujo de datos\Honduras SQL Server"
+          TopLeft="450,48" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Tarea Flujo de datos\Columna derivada"
+          TopLeft="590,173" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Turista_Gubernamental]"
+          TopLeft="436,274">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="176.5,53"
+              Start="0,0"
+              End="176.5,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.4864864864865" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.4864864864865"
+                    Point2="0,21.4864864864865"
+                    Point3="4,21.4864864864865" />
+                  <mssgle:LineSegment
+                    End="172.5,21.4864864864865" />
+                  <mssgle:CubicBezierSegment
+                    Point1="172.5,21.4864864864865"
+                    Point2="176.5,21.4864864864865"
+                    Point3="176.5,25.4864864864865" />
+                  <mssgle:LineSegment
+                    End="176.5,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="35.88677734375,26.4864864864865,104.7264453125,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de Unión de todo 1]"
+          TopLeft="491,162">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="99,32"
+              Start="0,0"
+              End="91.5,32">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="45.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.5,0"
+                    Point2="49.5,0"
+                    Point3="49.5,4" />
+                  <mssgle:LineSegment
+                    End="49.5,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49.5,28"
+                    Point2="49.5,32"
+                    Point3="53.5,32" />
+                  <mssgle:LineSegment
+                    End="91.5,32" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET1]"
+          TopLeft="521,90">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-80.3333333333334,51"
+              Start="0,0"
+              End="-80.3333333333334,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.2705248990579" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.2705248990579"
+                    Point2="0,30.2705248990579"
+                    Point3="-4,30.2705248990579" />
+                  <mssgle:LineSegment
+                    End="-76.3333333333334,30.2705248990579" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-76.3333333333334,30.2705248990579"
+                    Point2="-80.3333333333334,30.2705248990579"
+                    Point3="-80.3333333333334,34.2705248990579" />
+                  <mssgle:LineSegment
+                    End="-80.3333333333334,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de ADO NET]"
+          TopLeft="298.5,90">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="104,51"
+              Start="0,0"
+              End="104,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5"
+                    Point2="0,31.5"
+                    Point3="4,31.5" />
+                  <mssgle:LineSegment
+                    End="100,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="100,31.5"
+                    Point2="104,31.5"
+                    Point3="104,35.5" />
+                  <mssgle:LineSegment
+                    End="104,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
+          TopLeft="590,199.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-94,53.3333333333333"
+              Start="0,0"
+              End="-86.5,53.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-35.6697247706422,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-35.6697247706422,0"
+                    Point2="-39.6697247706422,0"
+                    Point3="-39.6697247706422,4" />
+                  <mssgle:LineSegment
+                    End="-39.6697247706422,49.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-39.6697247706422,49.3333333333333"
+                    Point2="-39.6697247706422,53.3333333333333"
+                    Point3="-43.6697247706422,53.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-86.5,53.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Ejecutivo_Preferencial]"
+          TopLeft="380,274">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-143,47"
+              Start="0,0"
+              End="-143,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.0540540540541" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.0540540540541"
+                    Point2="0,19.0540540540541"
+                    Point3="-4,19.0540540540541" />
+                  <mssgle:LineSegment
+                    End="-139,19.0540540540541" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-139,19.0540540540541"
+                    Point2="-143,19.0540540540541"
+                    Point3="-143,23.0540540540541" />
+                  <mssgle:LineSegment
+                    End="-143,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-120.32212890625,24.0540540540541,97.6442578125,11.7119140625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Excel Turista-Gubernamental">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Excel Ejecutivo-Preferencial">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Costa Rica MySQL Server">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Honduras SQL Server">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
